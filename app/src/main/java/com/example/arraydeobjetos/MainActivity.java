@@ -1,14 +1,11 @@
 package com.example.arraydeobjetos;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     EditText nome, sobrenome;
@@ -26,24 +23,14 @@ public class MainActivity extends AppCompatActivity {
         btAdicionar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                nome.setText("");
-                sobrenome.setText("");
-                nome.requestFocus();
+                // ADICIONAR ELEMENTOS NA LISTA
             }
         });
 
         btProxima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Criação da Intent
-                Intent it = new Intent(getApplicationContext(), Resultado.class);
-
-                // colocando o ArrayList com os objetos Pessoa na Intent
-                //it.putExtra("pessoas", listaPessoas);
-
-                // envia o objeto
-                startActivity(it);
+                // ENVIAR PARA OUTRA ACTIVITY
             }
         });
     }
